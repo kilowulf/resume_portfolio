@@ -1,7 +1,11 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Socials from "@/components/ui/Socials";
 import Photo from "@/components/ui/Photo";
+import Stats from "@/components/ui/Stats";
+
+import { TypeAnimation } from "react-type-animation";
 const Home = () => {
   return (
     <section className="h-full">
@@ -10,11 +14,35 @@ const Home = () => {
           {/*text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-accent text-xl">{"//"} </span>
-            <span className="text-xl">Full Stack Engineer</span>
+            <span className="text-xl text-outline text-transparent">
+              Full Stack Engineer
+            </span>
             <span className="text-accent text-xl"> {"//"} </span>
             <h1 className="h1 mb-6">
-              Hello I&apos;m <br />
-              <span className="text-accent">Aaron Brown</span>
+              {/* Right bracket */}
+              <div className="flex items-center justify-center xl:justify-start">
+                <span className="text-accent flex xl:flex-row items-center">
+                  <span className="pr-1">#</span>
+                  <TypeAnimation
+                    sequence={[
+                      "Hello I'm",
+                      3000, // Wait 3 seconds
+                      "I'm a Programmer",
+                      2000, // Wait 2 seconds
+                      "I'm a Developer",
+                      3000 // Wait 3 seconds
+                    ]}
+                    speed={150} // Typing speed (characters per second)
+                    wrapper="span"
+                    repeat={Infinity} // Infinite loop
+                    style={{
+                      fontSize: ".75em",
+                      display: "inline-block"
+                    }}
+                  />
+                </span>
+              </div>
+              <span>Aaron Brown</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               I love designing and building innovative digital solutions that
@@ -45,6 +73,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Stats />
     </section>
   );
 };
