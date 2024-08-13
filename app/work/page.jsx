@@ -23,7 +23,8 @@ const projects = [
     num: "01",
     category: "frontend",
     title: "Asset Recovery Firm",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "An E-Service platform for finding and processing overage assessments for residential properties and foreclosures",
     stack: [
       { name: "Html5" },
       { name: "Css3" },
@@ -34,14 +35,15 @@ const projects = [
       { name: "MongoDb" }
     ],
     image: "/assets/work/assetrecoverfirm_proj.png",
-    live: "",
-    github: ""
+    live: "https://assetrecoveryfirm.netlify.app/",
+    github: "https://github.com/kilowulf/asset-recovery-firm"
   },
   {
     num: "02",
     category: "full-stack",
-    title: "SpotFinder Open Source Project Finder",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "SpotFinder",
+    description:
+      "A community platform intended to connect open source project teams and potential contributors together. A feature rich system with customizable profiles and live feed to project states including easy to use entry level resources to introduce new up and coming developers to the expansive world of open source.",
     stack: [
       { name: "Html5" },
       { name: "Css3" },
@@ -53,8 +55,8 @@ const projects = [
       { name: "MongoDb" }
     ],
     image: "/assets/work/spotfinder_proj.png",
-    live: "",
-    github: ""
+    live: "https://spotfinder-zabd.onrender.com/",
+    github: "https://github.com/kilowulf/spot_finder_project"
   }
 ];
 
@@ -89,6 +91,14 @@ const Work = () => {
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {project.category} project
               </h2>
+              {/*project category */}
+              <div className="flex items-center gap-2">
+                <span className="text-accent text-2xl">{"//"} </span>
+                <h4 className="text-[30px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                  {project.title}
+                </h4>
+                <span className="text-accent text-2xl">{"//"} </span>
+              </div>
               {/*project description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
@@ -108,7 +118,11 @@ const Work = () => {
               {/*buttons */}
               <div className="flex items-center gap-4">
                 {/*live project button */}
-                <Link href={project.live}>
+                <Link
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TooltipProvider duration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -121,7 +135,11 @@ const Work = () => {
                   </TooltipProvider>
                 </Link>
                 {/*github code button*/}
-                <Link href={project.github}>
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TooltipProvider duration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -155,7 +173,7 @@ const Work = () => {
                           src={project.image}
                           fill
                           alt=""
-                          className="object-cover"
+                          className="object-cover rounded-sm"
                         />
                       </div>
                     </div>

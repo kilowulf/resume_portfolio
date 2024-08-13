@@ -30,6 +30,8 @@ const Home = () => {
                       "I'm a Programmer",
                       2000, // Wait 2 seconds
                       "I'm a Developer",
+                      3000, // Wait 3 seconds
+                      "I'm a Designer",
                       3000 // Wait 3 seconds
                     ]}
                     speed={150} // Typing speed (characters per second)

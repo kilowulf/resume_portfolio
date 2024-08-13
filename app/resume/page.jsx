@@ -31,11 +31,13 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
+import Image from "next/image";
+
 // about data
 
 const about = {
   title: "About me",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description: "Some of my personal details.",
   info: [
     { fieldName: "Name", fieldValue: "Aaron Brown" },
     { fieldName: "Phone", fieldValue: "801-319-3765" },
@@ -51,7 +53,8 @@ const about = {
 const experience = {
   icon: "",
   title: "Work Experience",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description:
+    "These are but a few of the exciting projects I've had the privilege of working on.",
   items: [
     {
       company: "E-Commerce Project",
@@ -78,17 +81,20 @@ const experience = {
 const education = {
   icon: "/assets/resume/uvu_logo_seal.jpg",
   title: "Education",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description:
+    "The following are institutions and platforms that have benefited me greatly in acquiring the skills and practical experience to grow as a Full Stack Engineer.",
   items: [
     {
       institution: "Utah Valley University",
       degree: "Bachelor of Science in Computer Science",
-      duration: "2020-2024"
+      duration: "2020-2024",
+      image: ""
     },
     {
       institution: "AWS Academy",
       degree: "Certificate: AWS Cloud Developing",
-      duration: "May 2024"
+      duration: "May 2024",
+      image: ""
     }
   ]
 };
@@ -96,7 +102,8 @@ const education = {
 // skills
 const skills = {
   title: "Skills",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description:
+    "These are a collection of the technologies I've employed in my time as a developer. I'm always looking to expand my skill set by exposing myself to new and innovative tools.",
   skillList: [
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "CSS", icon: <FaCss3 /> },
@@ -142,7 +149,11 @@ const Resume = () => {
             {/*experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <div className="flex justify-center xl:justify-start gap-2">
+                  <span className="text-accent text-3xl">{"//"}</span>
+                  <h3 className="text-4xl font-bold">{experience.title}</h3>
+                  <span className="text-accent text-3xl">{"//"}</span>
+                </div>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
@@ -175,7 +186,11 @@ const Resume = () => {
             {/*education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
+                <div className="flex justify-center xl:justify-start gap-2">
+                  <span className="text-accent text-3xl">{"//"}</span>
+                  <h3 className="text-4xl font-bold">{education.title}</h3>
+                  <span className="text-accent text-3xl">{"//"}</span>
+                </div>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
@@ -195,6 +210,7 @@ const Resume = () => {
                             {/*dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.institution}</p>
+                            <div className="">{item.image}</div>
                             {/* <span></span>
                             <p>{item.techStack}</p> */}
                           </div>
@@ -209,7 +225,11 @@ const Resume = () => {
             <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] tet-center xl:text-left">
-                  <h3>{skills.title}</h3>
+                  <div className="flex justify-center xl:justify-start gap-2">
+                    <span className="text-accent text-3xl">{"//"}</span>
+                    <h3 className="text-4xl font-bold">{skills.title}</h3>
+                    <span className="text-accent text-3xl">{"//"}</span>
+                  </div>
                   <p>{skills.description}</p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
@@ -240,7 +260,11 @@ const Resume = () => {
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <div className="flex justify-center xl:justify-start gap-2">
+                  <span className="text-accent text-3xl">{"//"}</span>
+                  <h3 className="text-4xl font-bold">{about.title}</h3>
+                  <span className="text-accent text-3xl">{"//"}</span>
+                </div>
                 <p className="max-w-[600px] pb-3 text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>

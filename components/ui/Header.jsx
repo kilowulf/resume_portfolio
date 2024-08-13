@@ -24,7 +24,7 @@ const Header = () => {
           <div className="hidden lg:flex">
             <Nav />
             <Link href="/contact">
-              <Button>Hire Me</Button>
+              <Button>Contact Me</Button>
             </Link>
           </div>
         </div>
