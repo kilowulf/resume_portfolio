@@ -17,7 +17,8 @@ import {
   SiPython,
   SiCsharp,
   SiAmazonaws,
-  SiRedux
+  SiRedux,
+  SiPostgresql
 } from "react-icons/si";
 
 import { TbBrandKotlin } from "react-icons/tb";
@@ -37,14 +38,15 @@ import Image from "next/image";
 
 const about = {
   title: "About me",
-  description: "Some of my personal details.",
+  description:
+    "From my earliest memories, i have held a deep love and disposition for the creative endeavor. I enjoy everything from sketching 2d art work to writing speculative fiction.I enjoy long walks with my wife and spending meaningful time with friends and loved ones. I try to bring this creative instinct to my soft-tech projects and enjoy finding interesting ways to challenge the conventions in design paradigms.",
   info: [
     { fieldName: "Name", fieldValue: "Aaron Brown" },
     { fieldName: "Phone", fieldValue: "801-319-3765" },
     { fieldName: "Experience", fieldValue: "2+ years" },
     { fieldName: "Residence", fieldValue: "U.S.A." },
     { fieldName: "Contract", fieldValue: "Available" },
-    { fieldName: "Current Position", fieldValue: "Algify" },
+    { fieldName: "Current Position", fieldValue: "Algify LLC. (Owner)" },
     { fieldName: "Email", fieldValue: "kilonow1275@hotmail.com" }
   ]
 };
@@ -54,25 +56,28 @@ const experience = {
   icon: "",
   title: "Work Experience",
   description:
-    "These are but a few of the exciting projects I've had the privilege of working on.",
+    "These are but a few of the exciting projects I've had the privilege of working on. Live versions are hosted in development state on third party hosting services and intended for client viewing.",
   items: [
     {
-      company: "E-Commerce Project",
+      company: "LivDoc PDF Chatbot",
       position: "Full Stack Developer",
       duration: "May 2024-Aug 2024",
-      techStack: "React, Node.js, Express, MongoDB"
+      techStack: "NextJs, Node.js, tRPC, PostGres, Prisma, TailwindCSS",
+      desc: "PDF Chatbot powered by Pinecone and OpenAI"
     },
     {
       company: "Asset Recovery Firm LLC",
-      position: "Full Stack Developer -contract",
+      position: "Full Stack Developer :contract",
       duration: "Jan 2024-present",
-      techStack: "NextJs, Node.js, Express, MongoDB"
+      techStack: "React, Node.js, Express, MongoDB",
+      desc: "Foreclosure overage recovery"
     },
     {
-      company: "SpotFinder Open Source Project",
+      company: "OpenLink Open Source Social Media Platform",
       position: "Full Stack Developer",
       duration: "Aug 2023- Jan 2024",
-      techStack: "React, Node.js, Express, MongoDB"
+      techStack: "NextJs, Node.js, Express, PostGres, Prisma, TailwindCSS",
+      desc: "Connecting contributors with project leads"
     }
   ]
 };
@@ -88,12 +93,14 @@ const education = {
       institution: "Utah Valley University",
       degree: "Bachelor of Science in Computer Science",
       duration: "2020-2024",
+      honors: "Graduated Magna Cum Laude",
       image: ""
     },
     {
       institution: "AWS Academy",
       degree: "Certificate: AWS Cloud Developing",
       duration: "May 2024",
+      honors: "",
       image: ""
     }
   ]
@@ -103,7 +110,7 @@ const education = {
 const skills = {
   title: "Skills",
   description:
-    "These are a collection of the technologies I've employed in my time as a developer. I'm always looking to expand my skill set by exposing myself to new and innovative tools.",
+    "These are a collection of the technologies I've employed in my time as a developer. I'm always looking to expand my skill set and love to explore new and innovative soft-tech tools.",
   skillList: [
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "CSS", icon: <FaCss3 /> },
@@ -114,6 +121,7 @@ const skills = {
     { name: "Node.js", icon: <FaNodeJs /> },
     { name: "Figma", icon: <FaFigma /> },
     { name: "MongoDB", icon: <SiMongodb /> },
+    { name: "PostGres", icon: <SiPostgresql /> },
     { name: "MySQL", icon: <SiMysql /> },
     { name: "Python", icon: <SiPython /> },
     { name: "Kotlin", icon: <TbBrandKotlin /> },
@@ -167,14 +175,12 @@ const Resume = () => {
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
+                            {item.company}
                           </h3>
                           <div className="flex items-center gap-3">
                             {/*dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
-                            {/* <span></span>
-                            <p>{item.techStack}</p> */}
+                            {/* <span className="w-[6px] h-[6px] rounded-full bg-accent"></span> */}
+                            <p className="text-white/50">{item.desc}</p>
                           </div>
                         </li>
                       );
@@ -208,8 +214,9 @@ const Resume = () => {
                           </h3>
                           <div className="flex items-center gap-3">
                             {/*dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <span className="flex flex-col w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.institution}</p>
+
                             <div className="">{item.image}</div>
                             {/* <span></span>
                             <p>{item.techStack}</p> */}

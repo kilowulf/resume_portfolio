@@ -41,22 +41,40 @@ const projects = [
   {
     num: "02",
     category: "full-stack",
-    title: "SpotFinder",
+    title: "OPENLiNK",
     description:
-      "A community platform intended to connect open source project teams and potential contributors together. A feature rich system with customizable profiles and live feed to project states including easy to use entry level resources to introduce new up and coming developers to the expansive world of open source.",
+      "A community platform intended to connect open source project teams and potential contributors together. A feature rich social media system with customizable profiles, authentication (Lucia authentication/ Google Oauth) and live chat capabilities (Stream API). We have trending topics, likes and contemporaneous comment sections with uploads (Uploadthing API).",
     stack: [
       { name: "Html5" },
-      { name: "Css3" },
-      { name: "React" },
-      { name: "Javascript" },
-      { name: "Redux" },
+      { name: "TailwindCSS" },
+      { name: "NextJS" },
+      { name: "Typescript" },
       { name: "NodeJs" },
-      { name: "ExpressJs" },
-      { name: "MongoDb" }
+      { name: "PostGres" }
     ],
-    image: "/assets/work/spotfinder_proj.png",
-    live: "https://spotfinder-zabd.onrender.com/",
-    github: "https://github.com/kilowulf/spot_finder_project"
+    image: "/assets/work/openlink.png",
+    live: "https://openlink-social-media-app.vercel.app",
+    github: "https://github.com/kilowulf/openlink-social-media-app"
+  },
+  {
+    num: "03",
+    category: "full-stack",
+    title: "LivDoc",
+    description:
+      "A Full SaaS PDF Chatbot using A.I. (openAI API) with user profiles, authentication (Kinde API / Google Oauth) and document uploads (Uploadthing API). Tier Free / Pro membership paid plans are available with document size limitations on each (Stripe API). We leverage Pinecone vector databases with openAI embeddings to generate context specific chat experiences.",
+    stack: [
+      { name: "Html5" },
+      { name: "TailwindCSS" },
+      { name: "NextJS" },
+      { name: "Typescript" },
+      { name: "NodeJs" },
+      { name: "tRPC" },
+      { name: "PostGres" },
+      { name: "Pinecone" }
+    ],
+    image: "/assets/work/livdoc.png",
+    live: "https://livdoc.vercel.app",
+    github: "https://github.com/kilowulf/livdoc"
   }
 ];
 
@@ -172,7 +190,7 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          alt=""
+                          alt={project.title}
                           className="object-cover rounded-sm"
                         />
                       </div>

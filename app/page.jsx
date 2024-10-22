@@ -20,13 +20,11 @@ const Home = () => {
             <span className="text-accent text-xl"> {"//"} </span>
             <h1 className="h1 mb-6">
               {/* Right bracket */}
-              <div className="flex items-center justify-center xl:justify-start">
-                <span className="text-accent flex xl:flex-row items-center">
+              <div className="flex items-center justify-start">
+                <span className="text-accent flex pl-0 xl:flex-row items-center md:pl-14 sm:pl-14 xl:pl-0">
                   <span className="pr-1">#</span>
                   <TypeAnimation
                     sequence={[
-                      "Hello I'm",
-                      3000, // Wait 3 seconds
                       "I'm a Programmer",
                       2000, // Wait 2 seconds
                       "I'm a Developer",
@@ -53,7 +51,7 @@ const Home = () => {
             {/*btn and social links */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a
-                href="/assets/resume/full_stack_developer_Aug_2024.pdf"
+                href="/assets/resume/full_stack_developer_october_2024.pdf"
                 download
               >
                 <Button
