@@ -15,7 +15,7 @@ const Header = () => {
           <Link href="/">
             <h1 className="text-4xl font-semibold flex items-center">
               <span className="text-accent mr-2">[</span> {/* Left bracket */}
-              <span>Aaron</span> {/* Your name */}
+              <span>Aaron</span>
               <span className="text-accent ml-2 mr-4">~]</span>{" "}
             </h1>
           </Link>

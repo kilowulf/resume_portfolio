@@ -9,14 +9,22 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      xs: "399px",
+      sm: "640px",
+      md: "768px",
+      lg: "960px",
+      xl: "1280px"
+    },
     container: {
       center: true,
       padding: "15px",
       screens: {
+        xs: "399px",
         sm: "640px",
         md: "768px",
         lg: "960px",
-        xl: "1200px"
+        xl: "1280px"
       }
     },
     fontFamily: {

@@ -18,18 +18,20 @@ const Home = () => {
               Full Stack Engineer
             </span>
             <span className="text-accent text-xl"> {"//"} </span>
+
             <h1 className="h1 mb-6">
               {/* Right bracket */}
-              <div className="flex items-center justify-start">
-                <span className="text-accent flex pl-0 xl:flex-row items-center md:pl-14 sm:pl-14 xl:pl-0">
-                  <span className="pr-1">#</span>
+              <span>Aaron Brown</span>
+              <div className="flex items-center justify-start pl-0">
+                <span className="text-accent flex pl-0 xl:flex-row xl:pl-0 xl:ml-0 items-center lg:flex-row lg:pl-14 lg:ml-14 md:flex-row md:pl-14 md:ml-14 sm:pl-14 sm:ml-14 xs:pl-10 xs:ml-1">
+                  <span className="pr-3">#</span>
                   <TypeAnimation
                     sequence={[
-                      "I'm a Programmer",
+                      " Programmer",
                       2000, // Wait 2 seconds
-                      "I'm a Developer",
+                      " Developer",
                       3000, // Wait 3 seconds
-                      "I'm a Designer",
+                      " Designer",
                       3000 // Wait 3 seconds
                     ]}
                     speed={150} // Typing speed (characters per second)
@@ -42,7 +44,6 @@ const Home = () => {
                   />
                 </span>
               </div>
-              <span>Aaron Brown</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               I love designing and building innovative digital solutions that
@@ -73,7 +74,7 @@ const Home = () => {
             </div>
           </div>
           {/*photo */}
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none mb-4 xl:mb-0">
             <Photo />
           </div>
         </div>

@@ -20,7 +20,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" }
           }}
-          className="w-[270px] h-[298px] my-5 xl:w-[460px] xl:h-[480px] xl:my-10 mix-blend-hard-light rounded-full overflow-hidden absolute"
+          className="w-[260px] h-[250px] my-5 mx-3 xl:w-[440px] xl:h-[415px] xl:my-9 xl:mx-5 mix-blend-hard-light rounded-full overflow-hidden absolute"
         >
           <Image
             src="/assets/photo7.png"
@@ -67,34 +67,6 @@ const Photo = () => {
               }}
             />
             {/* Text along the circle */}
-            {/* <motion.text
-              fill="#00ffff"
-              fontSize="20"
-              fontFamily="Arial, sans-serif"
-            >
-              <textPath
-                href="#path"
-                startOffset="70%"
-                method="align"
-                spacing="auto"
-              > */}
-            {/* Your text string goes here */}
-            {/* Full Stack &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI/UX Design
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C#/C++
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Python
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Javascript
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HTML5
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSS3
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TailwindCSS */}
-            {/* </textPath>
-            </motion.text> */}
           </motion.g>
           {/* Defining the path for text */}
           <defs>

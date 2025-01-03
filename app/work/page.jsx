@@ -182,16 +182,16 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[470px] relative group flex justify-center items-center bg-black/10 p-2 border-2 border-gray-400/20 hover:border-black/20 rounded-sm shadow-lg transition-transform duration-500 hover:scale-105">
                       {/*overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/*image */}
-                      <div className="relative w-full h-full">
+                      <div className="relative w-full h-full overflow-hidden">
                         <Image
                           src={project.image}
                           fill
                           alt={project.title}
-                          className="object-cover rounded-sm"
+                          className="object-contain object-center rounded-sm"
                         />
                       </div>
                     </div>
