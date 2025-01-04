@@ -39,7 +39,7 @@ import Image from "next/image";
 const about = {
   title: "About me",
   description:
-    "I've always have held a deep love for the creative enterprise. My hobbies range from sketching 2d fantasy art to writing amateur speculative fiction.I enjoy long nature hikes with the wife and spending meaningful time with friends and loved ones. I try to employ this creative instinct to my soft-tech projects and enjoy finding interesting ways to challenge myself and build skill sets.",
+    "I've always held a deep love for the creative enterprise. My hobbies range from sketching 2d fantasy art to writing amateur speculative fiction.I enjoy long nature hikes with the wife and spending meaningful time with friends and loved ones. I try to employ this creative instinct to my soft-tech projects and enjoy finding interesting ways to challenge myself and build skill sets.",
   info: [
     { fieldName: "Name", fieldValue: "Aaron Brown" },
     { fieldName: "Phone", fieldValue: "801-319-3765" },
