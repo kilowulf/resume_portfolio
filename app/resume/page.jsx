@@ -38,8 +38,12 @@ import Image from "next/image";
 
 const about = {
   title: "About me",
-  description:
-    "I've always held a deep love for the creative enterprise. My hobbies range from sketching 2d fantasy art to writing amateur speculative fiction.I enjoy long nature hikes with the wife and spending meaningful time with friends and loved ones. I try to consistently employ this creative instinct to whatever projects i may be engaged and find fulfillment in challenging my skill sets as well as building new ones.",
+  description: `I've always held a deep love for the creative enterprise. 
+    My hobbies range from sketching 2d fantasy art to writing amateur 
+    speculative fiction.I enjoy long nature hikes with the wife and spending 
+    meaningful time with friends and loved ones. I try to consistently employ 
+    this creative instinct to whatever projects i may be engaged and find fulfillment 
+    in challenging my skill sets as well as building new ones.`,
   info: [
     { fieldName: "Name", fieldValue: "Aaron Brown" },
     { fieldName: "Phone", fieldValue: "801-319-3765" },
@@ -48,6 +52,34 @@ const about = {
     { fieldName: "Contract", fieldValue: "Available" },
     { fieldName: "Current Position", fieldValue: "Algify LLC. (Owner)" },
     { fieldName: "Email", fieldValue: "kilonow1275@hotmail.com" }
+  ]
+};
+
+// volunteer data
+
+const volunteer = {
+  title: "Volunteer Experience",
+  description: `An important aspect of who I am is shaped by the opportunities 
+  I’ve had to serve others. Engaging in service has profoundly enriched my perspective 
+  and deepened my connection to my community. For two years, I served as a missionary 
+  in the Michigan Lansing Mission — an experience that profoundly transformed my life for the better.
+       `,
+  activityTitle: `Service Activities: `,
+  activitySubTitle: `Development`,
+  activities: [
+    { name: "Weekly community volunteer service at local institutions" },
+    { name: "Daily cold calling and contacting" },
+    { name: "Interpersonal communications" },
+    { name: "Daily / Weekly Goal setting / tracking" },
+    { name: "Organized training / study regimes" }
+  ],
+  info: [
+    {
+      fieldName: "Organization",
+      fieldValue: "LDS Church"
+    },
+    { fieldName: "Mission", fieldValue: "Michigan Lansing" },
+    { fieldName: "Duration", fieldValue: "2 years" }
   ]
 };
 
@@ -151,6 +183,7 @@ const Resume = () => {
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
+            <TabsTrigger value="volunteer">Volunteer</TabsTrigger>
           </TabsList>
           {/*content */}
           <div className="min-h-[70vh] w-full">
@@ -284,6 +317,58 @@ const Resume = () => {
                       >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </TabsContent>
+            {/*volunteer work */}
+            <TabsContent
+              value="volunteer"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
+                <div className="flex justify-center xl:justify-start gap-2">
+                  <span className="text-accent text-3xl">{"//"}</span>
+                  <h3 className="text-4xl font-bold">{volunteer.title}</h3>
+                  <span className="text-accent text-3xl">{"//"}</span>
+                </div>
+                <p className="max-w-[600px] pb-3 text-white/60 mx-auto xl:mx-0">
+                  {volunteer.description}
+                </p>
+                <br />
+                {/*activities */}
+                <div className="flex justify-center xl:justify-start gap-2">
+                  <span className="text-accent text-2xl">{"//"}</span>
+                  <h4 className="text-2xl font-bold">
+                    {volunteer.activityTitle}
+                    <span className="text-accent text-xl">
+                      {volunteer.activitySubTitle}
+                    </span>
+                  </h4>
+                  <span className="text-accent text-2xl">{"//"}</span>
+                </div>
+                {/* List of Activities */}
+                <ul className="max-w-[600px] mx-auto xl:mx-0 list-disc list-inside text-white/60">
+                  {volunteer.activities.map((activity, index) => (
+                    <li key={index} className="mb-2 marker:text-accent">
+                      {activity.name}
+                    </li>
+                  ))}
+                </ul>
+                <br />
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0 text-accent">
+                  {volunteer.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="flex flex-col text-xl">
+                          {item.fieldValue}
+                        </span>
                       </li>
                     );
                   })}
