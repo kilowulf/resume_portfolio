@@ -59,26 +59,32 @@ const about = {
 
 const volunteer = {
   title: "Volunteer Experience",
-  description: `An important aspect of who I am is shaped by the opportunities 
-  I’ve had to serve others. Engaging in service has profoundly enriched my perspective 
-  and deepened my connection to my community. For two years, I served as a missionary 
-  in the Michigan Lansing Mission — an experience that profoundly transformed my life for the better.
-       `,
-  activityTitle: `Service Activities: `,
-  activitySubTitle: `Development`,
+  description: `Volunteering has been a cornerstone of my personal and professional growth. 
+  Serving others has provided me with invaluable lessons about empathy, resilience, and the importance of community. 
+  For two years, I dedicated myself as a missionary in the Michigan Lansing Mission, 
+  an experience that not only strengthened my interpersonal skills but also broadened my outlook on leadership, service, and personal fulfillment.`,
+  activityTitle: `Key Contributions:`,
+  activitySubTitle: `Skill Development Highlights`,
   activities: [
-    { name: "Weekly community volunteer service at local institutions" },
-    { name: "Daily cold calling and contacting" },
-    { name: "Interpersonal communications" },
-    { name: "Daily / Weekly Goal setting / tracking" },
-    { name: "Organized training / study regimes" }
+    {
+      name: "Organized and participated in weekly community service at local institutions"
+    },
+    {
+      name: "Engaged in outreach through daily cold calling and in-person visits"
+    },
+    {
+      name: "Enhanced interpersonal communication, empathy, and conflict resolution skills"
+    },
+    {
+      name: "Implemented strategic goal setting and tracked progress consistently"
+    },
+    {
+      name: "Managed time effectively and coordinated team training and study schedules"
+    }
   ],
   info: [
-    {
-      fieldName: "Organization",
-      fieldValue: "LDS Church"
-    },
-    { fieldName: "Mission", fieldValue: "Michigan Lansing" },
+    { fieldName: "Organization", fieldValue: "LDS Church" },
+    { fieldName: "Mission", fieldValue: "Michigan Lansing Mission" },
     { fieldName: "Duration", fieldValue: "2 years" }
   ]
 };
@@ -182,8 +188,8 @@ const Resume = () => {
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="volunteer">Volunteer Work</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
-            <TabsTrigger value="volunteer">Volunteer</TabsTrigger>
           </TabsList>
           {/*content */}
           <div className="min-h-[70vh] w-full">
