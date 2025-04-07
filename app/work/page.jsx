@@ -75,6 +75,28 @@ const projects = [
     image: "/assets/work/livdoc.png",
     live: "https://livdoc.vercel.app",
     github: "https://github.com/kilowulf/livdoc"
+  },
+  {
+    num: "04",
+    category: "full-stack",
+    title: "WebSweep",
+    description:
+      "An automated web-scrapping platform employing A.I. for specialized workflows. ReactFlow library used for grid display visualization of node components. Full Saas functionality with Stripe payment system and Clerk secure sign-in. Fully automated page navigation with Puppeteer",
+    stack: [
+      { name: "Html5" },
+      { name: "TailwindCSS" },
+      { name: "NextJS" },
+      { name: "Typescript" },
+      { name: "NodeJs" },
+      { name: "Stripe" },
+      { name: "PostGres" },
+      { name: "Clerk" },
+      { name: "Puppeteer" },
+      { name: "ReactFlow" }
+    ],
+    image: "/assets/work/websweep.png",
+    live: "https://web-sweep.vercel.app",
+    github: "https://github.com/kilowulf/web-sweep"
   }
 ];
 

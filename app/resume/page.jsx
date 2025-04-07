@@ -38,12 +38,8 @@ import Image from "next/image";
 
 const about = {
   title: "About me",
-  description: `I've always held a deep love for the creative enterprise. 
-    My hobbies range from sketching 2d fantasy art to writing amateur 
-    speculative fiction.I enjoy long nature hikes with the wife and spending 
-    meaningful time with friends and loved ones. I try to consistently employ 
-    this creative instinct to whatever projects i may be engaged and find fulfillment 
-    in challenging my skill sets as well as building new ones.`,
+  description: ` 
+    My hobbies include sketching, writing fiction, and hiking with my wife. I value meaningful connections with friends and loved ones and am passionate about creative endeavors. I bring this creativity into all projects I undertake, always seeking out interesting challenges that help me grow my existing skills or acquire new ones.`,
   info: [
     { fieldName: "Name", fieldValue: "Aaron Brown" },
     { fieldName: "Phone", fieldValue: "801-319-3765" },
@@ -59,27 +55,26 @@ const about = {
 
 const volunteer = {
   title: "Volunteer Experience",
-  description: `Volunteering has been a cornerstone of my personal and professional growth. 
-  Serving others has provided me with invaluable lessons about empathy, resilience, and the importance of community. 
+  description: `Volunteering has been a cornerstone of my personal and professional growth.    
   For two years, I dedicated myself as a missionary in the Michigan Lansing Mission, 
-  an experience that not only strengthened my interpersonal skills but also broadened my outlook on leadership, service, and personal fulfillment.`,
+  an experience that not only strengthened my personal faith but developed important interpersonal skills which have proven critical in my professional pursuits.  Leadership, dedication, and service to community are among the many notable receipts from that experience.`,
   activityTitle: `Key Contributions:`,
   activitySubTitle: `Skill Development Highlights`,
   activities: [
     {
-      name: "Organized and participated in weekly community service at local institutions"
+      name: "Organized and participated in weekly community service events"
     },
     {
-      name: "Engaged in outreach through daily cold calling and in-person visits"
+      name: "Statewide coordination and logistical planning"
     },
     {
-      name: "Enhanced interpersonal communication, empathy, and conflict resolution skills"
+      name: "Continuous interpersonal communication trainings"
     },
     {
-      name: "Implemented strategic goal setting and tracked progress consistently"
+      name: "Strategic short-to-long team and personal goal setting"
     },
     {
-      name: "Managed time effectively and coordinated team training and study schedules"
+      name: "Time management skills"
     }
   ],
   info: [
@@ -349,7 +344,7 @@ const Resume = () => {
                   <span className="text-accent text-2xl">{"//"}</span>
                   <h4 className="text-2xl font-bold">
                     {volunteer.activityTitle}
-                    <span className="text-accent text-xl">
+                    <span className="text-accent text-xl ml-3">
                       {volunteer.activitySubTitle}
                     </span>
                   </h4>
@@ -371,10 +366,10 @@ const Resume = () => {
                         key={index}
                         className="flex items-center justify-center xl:justify-start gap-4"
                       >
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="flex flex-col text-xl">
-                          {item.fieldValue}
+                        <span className="flex text-white/60">
+                          {item.fieldName}
                         </span>
+                        <span className="flex text-xl">{item.fieldValue}</span>
                       </li>
                     );
                   })}
